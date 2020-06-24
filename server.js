@@ -12,3 +12,7 @@ app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
+
+app.listen(PORT, () => {
+    console.log(`App running on port http://localhost:${PORT}`);
+  });
