@@ -13,7 +13,16 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
+//Putting Mongodb in heroku
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 
+mongoose.connect(MONGODB_URI,{ useNewUrlParser: true, useUnifiedTopology: true })
+.then(()=> console.log('Connection Successful!!'))
+.catch(err => console.error(err));
+
+//Requiring the API and HTML routes
+require("./routes/html-routes.js")(app);
+require("./routes/api-routes.js")(app);
 
 //Saying what the app is running on
 app.listen(PORT, () => {
