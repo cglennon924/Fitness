@@ -21,8 +21,8 @@ mongoose.connect(MONGODB_URI,{ useNewUrlParser: true, useUnifiedTopology: true }
 .catch(err => console.error(err));
 
 //Requiring the API and HTML routes
-require("./routes/html-routes.js")(app);
-require("./routes/api-routes.js")(app);
+require("./routes/html_routes.js")(app);
+require("./routes/api_routes.js")(app);
 
 //Saying what the app is running on
 app.listen(PORT, () => {
