@@ -1,6 +1,6 @@
 const express = require("express");
-const morgan = require("morgan");
 const mongoose = require("mongoose");
+const morgan = require("morgan");
 const path = require("path");
 
 // Creating a PORT and requiring models to sync
