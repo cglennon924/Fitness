@@ -2,7 +2,7 @@
 
 ## User Story
 ```
-* AS A user
+AS A user
 I WANT to be able to view, create and track daily workouts 
 SO THAT I can know how to be stay on track with my workouts
 ```
